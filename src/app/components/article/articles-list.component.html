@@ -1,0 +1,16 @@
+<div>
+  <mat-card class="article-element" *ngFor="let article of this.articles" >
+    <mat-card-title>{{article.name}}</mat-card-title>
+    <mat-card-content>
+      <h1>{{article.price}} CHF</h1>
+      <p>
+        {{article.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+</div>

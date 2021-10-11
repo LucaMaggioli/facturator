@@ -1,0 +1,7 @@
+#homePage-grid{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+/*.articles-container{*/
+/*}*/
