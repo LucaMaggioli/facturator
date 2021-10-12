@@ -2,9 +2,6 @@
   height: 100%;
   overflow: auto;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .client-element{
@@ -24,6 +21,12 @@
 ::-webkit-scrollbar-thumb {
   background: #6C52FE;
   border-radius: 5px;
+}
+
+.no-clients-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .no-clients{

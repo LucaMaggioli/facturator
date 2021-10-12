@@ -1,4 +1,4 @@
-<div id="clients-container">
+<div *ngIf="clients.length !== 0" id="clients-container">
   <mat-card class="client-element" *ngFor="let client of this.clients" >
     <mat-card-title>{{client.name}}</mat-card-title>
     <mat-card-content>
@@ -10,7 +10,10 @@
       <button mat-button>Not Ok</button>
     </mat-card-actions>
   </mat-card>
-  <div *ngIf="clients.length === 0" class="no-clients">
+</div>
+<div class="no-clients-container" *ngIf="clients.length === 0">
+  <div class="no-clients">
     <p><strong>No Clients are available</strong></p>
+    <mat-spinner style="margin-left: 1em" [diameter]="30"></mat-spinner>
   </div>
 </div>

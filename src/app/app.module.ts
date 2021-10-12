@@ -18,6 +18,7 @@ import { ClientListComponent } from './components/client-list/client-list.compon
 import { BillCreationComponent } from './components/bill-creation/bill-creation.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { AppRoutingModule } from './app-routing.module';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     MatExpansionModule,
     AppRoutingModule,
+    MatProgressSpinnerModule,
   ],
   providers: [FacturatorApiCallService],
   bootstrap: [AppComponent]

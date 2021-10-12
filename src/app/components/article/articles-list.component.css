@@ -1,9 +1,9 @@
 #articles-container{
   height: 100%;
   overflow: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
 }
 
 .article-element{
@@ -23,6 +23,11 @@
 ::-webkit-scrollbar-thumb {
   background: #6C52FE;
   border-radius: 5px;
+}
+.no-articles-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .no-articles{
   background-color: aliceblue;
