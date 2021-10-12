@@ -12,5 +12,7 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
-  <br>
+  <div *ngIf="articles.length === 0" class="no-articles">
+    <p><strong>No Articles are available</strong></p>
+  </div>
 </div>

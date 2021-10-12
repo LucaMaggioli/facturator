@@ -10,5 +10,7 @@
       <button mat-button>Not Ok</button>
     </mat-card-actions>
   </mat-card>
-  <br>
+  <div *ngIf="clients.length === 0" class="no-clients">
+    <p><strong>No Clients are available</strong></p>
+  </div>
 </div>

@@ -11,4 +11,7 @@ export class Client{
     this.email = _email;
   }
 
+  public fromDtoToJson(){
+    return { id:this.id, name:this.name, address:this.address, email:this.email }
+  }
 }

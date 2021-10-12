@@ -15,6 +15,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import { ClientListComponent } from './components/client-list/client-list.component';
+import { BillCreationComponent } from './components/bill-creation/bill-creation.component';
+import {MatExpansionModule} from "@angular/material/expansion";
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -23,7 +26,8 @@ import { ClientListComponent } from './components/client-list/client-list.compon
     HomePageComponent,
     ArticlesListComponent,
     AddClientFormComponent,
-    ClientListComponent
+    ClientListComponent,
+    BillCreationComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { ClientListComponent } from './components/client-list/client-list.compon
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule,
+    AppRoutingModule,
   ],
   providers: [FacturatorApiCallService],
   bootstrap: [AppComponent]
