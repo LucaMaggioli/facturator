@@ -50,8 +50,6 @@ export class AddClientFormComponent implements OnInit {
   setTemporaryMessage(tempoMessage:string, succes:boolean){
     this.tempoMessage = tempoMessage;
     this.sleep(3000).then(()=>{this.tempoMessage = null});
-    // setTimeout(()=>{    console.log(tempoMessage);this.tempoMessage = tempoMessage;}, 3000);
-    // this.tempoMessage = null;
   }
 
   sleep(ms:number) {

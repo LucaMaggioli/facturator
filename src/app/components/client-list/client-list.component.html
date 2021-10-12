@@ -1,0 +1,14 @@
+<div id="clients-container">
+  <mat-card class="client-element" *ngFor="let client of this.clients" >
+    <mat-card-title>{{client.name}}</mat-card-title>
+    <mat-card-content>
+      <p><strong>Address: </strong>{{client.address}}</p>
+      <p><strong>E-Mail: </strong>{{client.email}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Ok</button>
+      <button mat-button>Not Ok</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+</div>

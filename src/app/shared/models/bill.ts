@@ -7,6 +7,6 @@ export class Bill{
   totalPrice: number = 0;
   validated: boolean = false;
 
-  client: Client = new Client();
+  client: Client = new Client('','','');
   articles: Article[] = [];
 }

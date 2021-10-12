@@ -12,5 +12,4 @@ export class Article{
     this.price = price;
     this.description = description;
   }
-
 }

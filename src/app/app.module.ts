@@ -14,6 +14,7 @@ import { AddClientFormComponent } from './components/add-client-form/add-client-
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
+import { ClientListComponent } from './components/client-list/client-list.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     AppComponent,
     HomePageComponent,
     ArticlesListComponent,
-    AddClientFormComponent
+    AddClientFormComponent,
+    ClientListComponent
   ],
   imports: [
     BrowserModule,

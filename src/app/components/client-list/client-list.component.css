@@ -1,9 +1,10 @@
-#articles-container{
+#clients-container{
   height: 100%;
   overflow: auto;
+  border-radius: 12px;
 }
 
-.article-element{
+.client-element{
   margin: 1em;
 }
 

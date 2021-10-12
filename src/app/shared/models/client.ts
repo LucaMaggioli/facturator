@@ -1,9 +1,11 @@
 export class Client{
-  name?: string = "";
-  address?: string = "";
-  email?: string = "";
+  id:any = 0;
+  name: string = "";
+  address: string = "";
+  email: string = "";
 
-  constructor(_name?:string, _address?:string, _email?:string) {
+  constructor(_name:string, _address:string, _email:string, _id?:any) {
+    this.id = _id;
     this.name = _name;
     this.address = _address;
     this.email = _email;
