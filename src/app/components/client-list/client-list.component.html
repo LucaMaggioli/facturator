@@ -5,9 +5,8 @@
       <p><strong>Address: </strong>{{client.address}}</p>
       <p><strong>E-Mail: </strong>{{client.email}}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>Ok</button>
-      <button mat-button>Not Ok</button>
+    <mat-card-actions *ngIf="selectionMode">
+      <button mat-stroked-button color="primary" (click)="selectClient(client)">Select Client</button>
     </mat-card-actions>
   </mat-card>
 </div>

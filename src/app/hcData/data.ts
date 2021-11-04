@@ -3,10 +3,10 @@ import {Bill} from "../shared/models/bill";
 import {Client} from "../shared/models/client";
 
 export const articles: Article[] = [
-  new Article("0-1", "phone", "/photo/url", 55.99 , "description"),
-  new Article("0-2", "laptop", "/photo/url", 225.99, "description" ),
-  new Article("0-3", "fridge", "/photo/url", 79.99 , "description"),
-  new Article("0-4", "book", "/photo/url", 5.99 , "description")
+  new Article( "phone",55.99 , "/photo/url", "description", "0-1"),
+  new Article("laptop",225.99, "/photo/url",  "description","0-2" ),
+  new Article( "fridge", 79.99, "/photo/url", "description", "0-3"),
+  new Article("book",  5.99 ,"/photo/url", "description","0-4")
 ];
 
 export const bills: Bill[] = [];

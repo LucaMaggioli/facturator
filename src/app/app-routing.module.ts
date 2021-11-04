@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import {Router, RouterModule, Routes} from "@angular/router";
 import {BillCreationComponent} from "./components/bill-creation/bill-creation.component";
 import {HomePageComponent} from "./components/home-page/home-page.component";
+import {ClientPageComponent} from "./components/client-page/client-page.component";
+import {ArticlesPageComponent} from "./components/articles-page/articles-page.component";
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'bill', component: BillCreationComponent },
+  { path: 'clients', component: ClientPageComponent },
+  { path: 'articles', component: ArticlesPageComponent },
   { path: 'home', component: HomePageComponent }
 ];
 

@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Article} from "../../shared/models/article";
 import {articles} from "../../hcData/data";
+import {Client} from "../../shared/models/client";
 
 @Component({
   selector: 'app-articles-list',
@@ -10,6 +11,8 @@ import {articles} from "../../hcData/data";
 export class ArticlesListComponent implements OnInit {
 
   @Input() articles: Article[] = [];
+  @Input() selectionMode:boolean = false;
+  @Output() selUnselectArticle = new EventEmitter<Article>();
 
   constructor() { }
 
@@ -17,8 +20,10 @@ export class ArticlesListComponent implements OnInit {
   }
 
   ngOnChanges():void{
-    console.log("articles in articleComponent");
-    console.log(this.articles);
+  }
+
+  selUnselArticle(article:Article){
+    this.selUnselectArticle.emit(article);
   }
 
 }

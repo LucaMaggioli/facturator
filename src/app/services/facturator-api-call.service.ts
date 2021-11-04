@@ -8,7 +8,8 @@ import {Client} from "../shared/models/client";
 })
 export class FacturatorApiCallService {
 
-  backendURL: string = "https://localhost:44335/api"
+  backendURL: string = "https://localhost:44335/api";
+
 
 
   constructor(private http: HttpClient) { }

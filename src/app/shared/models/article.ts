@@ -1,11 +1,11 @@
 export class Article{
-  id: string = "";
+  id: any = "";
   name: string = "";
   photo: string = "";
   price: number = 0;
   description: string = "";
 
-  constructor(_id:string, _name:string, _photo:string, price:number, description:string) {
+  constructor(_name:string, price:number, _photo:string, description:string, _id?:string ) {
     this.id = _id;
     this.name = _name;
     this.photo = _photo;

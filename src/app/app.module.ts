@@ -19,6 +19,14 @@ import { BillCreationComponent } from './components/bill-creation/bill-creation.
 import {MatExpansionModule} from "@angular/material/expansion";
 import { AppRoutingModule } from './app-routing.module';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { BillConfirmerComponent } from './components/bill-confirmer/bill-confirmer.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { ClientPageComponent } from './components/client-page/client-page.component';
+import { ArticlesPageComponent } from './components/articles-page/articles-page.component';
+import { AddArticleFormComponent } from './components/add-article-form/add-article-form.component';
 
 
 @NgModule({
@@ -28,7 +36,11 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     ArticlesListComponent,
     AddClientFormComponent,
     ClientListComponent,
-    BillCreationComponent
+    BillCreationComponent,
+    BillConfirmerComponent,
+    ClientPageComponent,
+    ArticlesPageComponent,
+    AddArticleFormComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +54,12 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     MatExpansionModule,
     AppRoutingModule,
     MatProgressSpinnerModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatToolbarModule,
   ],
-  providers: [FacturatorApiCallService],
+  providers: [FacturatorApiCallService, MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

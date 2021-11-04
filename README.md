@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+##Notes:
+
+- for the component bill, is it better to pass clients and articles data via the localstorage or make another api request? 
+or is it better to call the component directly without using routes ? 

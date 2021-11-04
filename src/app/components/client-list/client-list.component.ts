@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Client} from "../../shared/models/client";
 
 @Component({
   selector: 'app-client-list',
@@ -8,6 +9,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ClientListComponent implements OnInit {
 
   @Input() clients:any [] = [];
+  @Input() selectionMode:boolean = false;
+  @Output() selectedClient = new EventEmitter<Client>();
 
   constructor() { }
 
@@ -16,6 +19,10 @@ export class ClientListComponent implements OnInit {
 
   ngOnChanges():void{
     console.log(this.clients);
+  }
+
+  selectClient(client:Client){
+    this.selectedClient.emit(client);
   }
 
 }

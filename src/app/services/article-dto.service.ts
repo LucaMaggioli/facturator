@@ -9,7 +9,7 @@ export class ArticleDtoService {
   constructor() { }
 
   public dataToArticle(dtoArticle: any):Article{
-    let article = new Article(dtoArticle['id'],dtoArticle['name'],dtoArticle['photoUrl'],dtoArticle['price'], dtoArticle['description']);
+    let article = new Article(dtoArticle['id'],dtoArticle['price'],dtoArticle['name'],dtoArticle['photoUrl'], dtoArticle['description']);
     return article;
   }
 }
