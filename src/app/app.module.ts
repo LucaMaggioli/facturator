@@ -27,6 +27,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import { ClientPageComponent } from './components/client-page/client-page.component';
 import { ArticlesPageComponent } from './components/articles-page/articles-page.component';
 import { AddArticleFormComponent } from './components/add-article-form/add-article-form.component';
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -42,23 +43,24 @@ import { AddArticleFormComponent } from './components/add-article-form/add-artic
     ArticlesPageComponent,
     AddArticleFormComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatExpansionModule,
-    AppRoutingModule,
-    MatProgressSpinnerModule,
-    MatCheckboxModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatToolbarModule,
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatExpansionModule,
+        AppRoutingModule,
+        MatProgressSpinnerModule,
+        MatCheckboxModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatToolbarModule,
+        MatIconModule,
+    ],
   providers: [FacturatorApiCallService, MatDatepickerModule],
   bootstrap: [AppComponent]
 })
