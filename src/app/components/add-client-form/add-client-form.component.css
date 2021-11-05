@@ -8,6 +8,8 @@
 }
 
 #add-client-container{
+  background-color: #DCDDE580;
+  /*0.3;*/
   padding: 4em 2em 4em 2em;
   margin: 4em 2em 4em 2em;
   border: 2px solid black;

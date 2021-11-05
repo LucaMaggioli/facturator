@@ -30,15 +30,24 @@
   </mat-expansion-panel>
 
   <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
-    <mat-expansion-panel-header>
+    <mat-expansion-panel-header  style="background-color: #DCDDE5">
       <mat-panel-title>
         Confirm
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <div class="confirm-bill">
-      <app-articles-list [articles]="bill.articles"></app-articles-list>
-      <app-client-list [clients]="[bill.client]"></app-client-list>
-    </div>
+<!--    <mat-expansion-panel-content  style="background-color: darkgray">-->
+      <div class="confirm-bill">
+        <div *ngIf="clientSelected">
+          <p>Client:</p>
+          <app-client-list [clients]="[bill.client]"></app-client-list>
+        </div>
+        <div *ngIf="articlesSelected">
+          <p>Articles:</p>
+          <app-articles-list [articles]="bill.articles"></app-articles-list>
+        </div>
+      </div>
+<!--    </mat-expansion-panel-content>-->
+
     <mat-action-row>
       <button mat-button color="warn" (click)="prevStep()">Previous</button>
       <button mat-button color="primary" (click)="nextStep()">Next</button>
