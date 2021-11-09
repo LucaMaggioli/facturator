@@ -16,6 +16,22 @@
   margin: 4em 2em 4em 2em;
 }
 
+.header-panel{
+  display: flex;
+  flex-direction: row;
+  grid-gap: 2em;
+  justify-content: center;
+  align-content: center;
+}
+.header-panel h2{
+  margin: 0;
+  padding: 0;
+}
+
+.header-panel mat-icon{
+  align-self: center;
+}
+
 /*
 ::ng-deep .mat-panel-title {
   text-align: center;

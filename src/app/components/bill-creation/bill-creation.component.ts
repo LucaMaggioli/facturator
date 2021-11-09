@@ -5,6 +5,7 @@ import {Article} from "../../shared/models/article";
 import {auditTime} from "rxjs/operators";
 import {ArticlesServiceService} from "../../services/articles-service.service";
 import {ClientService} from "../../services/client.service";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-bill-creation',
@@ -21,6 +22,7 @@ export class BillCreationComponent implements OnInit {
 
   articlesSelected:boolean = false;
   clientSelected:boolean = false;
+  date = new FormControl(new Date());
 
   constructor(
     private _ArticleService: ArticlesServiceService,
@@ -28,14 +30,8 @@ export class BillCreationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log("getting client and articles from billCreation")
     this.clients = this._ClientService.getClients();
     this.articles = this._ArticleService.getArticles();
-    console.log("Articles")
-
-    console.log(this.articles);
-    console.log("Clients")
-    console.log(this.clients);
   }
 
   setBillClient(client:Client){
@@ -55,7 +51,6 @@ export class BillCreationComponent implements OnInit {
     this.articlesSelected = this.bill.articles.length > 0;
   }
 
-
   setStep(index: number) {
     this.step = index;
   }
@@ -66,6 +61,10 @@ export class BillCreationComponent implements OnInit {
 
   prevStep() {
     this.step--;
+  }
+
+  saveBill(){
+    //do here an api call to save the bill in the backend
   }
 
 }

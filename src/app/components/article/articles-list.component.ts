@@ -1,7 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Article} from "../../shared/models/article";
-import {articles} from "../../hcData/data";
-import {Client} from "../../shared/models/client";
 
 @Component({
   selector: 'app-articles-list',
