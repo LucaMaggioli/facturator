@@ -21,4 +21,25 @@ export class ArticlesServiceService {
     return articles;
     //return articles;
   }
+
+  saveArticle(newArticle:Article){
+    let updatedArticlesList;
+    console.log(`saving new article`);
+    let body = JSON.stringify({"name":newArticle.name,
+      "photoUrl":newArticle.photo,
+      "price":newArticle.price,
+      "description":newArticle.description
+    });
+    console.log(body);
+    return fetch(this.backendURL + "/article", {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: body,
+    }).then((data)=> {
+      console.log(data);
+    })
+  }
 }

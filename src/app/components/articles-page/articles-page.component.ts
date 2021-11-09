@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FacturatorApiCallService} from "../../services/facturator-api-call.service";
 import {ArticlesServiceService} from "../../services/articles-service.service";
+import {Article} from "../../shared/models/article";
 
 @Component({
   selector: 'app-articles-page',
@@ -19,6 +20,11 @@ export class ArticlesPageComponent implements OnInit {
   ngOnInit(){
     this.articles = this._articleService.getArticles();
     this.dataLoaded = true;
+  }
+
+  saveArticle(newArticle:Article){
+    this._articleService.saveArticle(newArticle);
+    this.articles.push(newArticle);
   }
 
 }

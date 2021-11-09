@@ -32,6 +32,20 @@
   align-self: center;
 }
 
+#form-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  grid-gap: 2em;
+}
+
+#form-footer p{
+  color: forestgreen;
+  margin: 0;
+  padding: 0;
+}
+
 /*
 ::ng-deep .mat-panel-title {
   text-align: center;

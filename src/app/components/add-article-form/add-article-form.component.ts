@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
 import {Client} from "../../shared/models/client";
 import {Article} from "../../shared/models/article";
@@ -10,13 +10,13 @@ import {Article} from "../../shared/models/article";
 })
 export class AddArticleFormComponent implements OnInit {
 
+  @Output() newArticle = new EventEmitter<Article>();
 
   name = new FormControl('', [Validators.required]);
   price = new FormControl('', [Validators.required]);
   photoLink = new FormControl('');
   description = new FormControl('');
   tempoMessage:any = null;
-  newArticle:any;
 
   formOpened:boolean=false;
 
@@ -34,9 +34,10 @@ export class AddArticleFormComponent implements OnInit {
   }
 
   sendNewArticleEvent() {
-    let newArticle = new Article(this.name.value, this.price.value, this.photoLink.value, this.description.value)
+    let newArticle = new Article(this.name.value, this.price.value, this.photoLink.value, this.description.value);
+
     this.newArticle.emit(newArticle);
-    this.setTemporaryMessage('Client added successfully !', true);
+    this.setTemporaryMessage('Article added successfully !', true);
     this.resetForm();
   }
 
