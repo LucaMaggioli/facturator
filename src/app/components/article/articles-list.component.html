@@ -6,10 +6,13 @@
       <p>
         {{article.description}}
       </p>
+      <img [src]="article.photo" alt="article photo">
     </mat-card-content>
+
     <mat-card-actions *ngIf="selectionMode">
       <mat-checkbox (click)="selUnselArticle(article)">Select Article</mat-checkbox>
     </mat-card-actions>
+
   </mat-card>
 </div>
 <div class="no-articles-container">

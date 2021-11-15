@@ -4,5 +4,7 @@
   <button mat-button routerLink="/clients">Client page</button>
   <button mat-button routerLink="/articles">Article page</button>
   <button mat-button routerLink="/bill">Bill page</button>
+  <span class="example-spacer"></span>
+  <button *ngIf="_userService.isUserLogged" mat-icon-button color="primary" (click)="logOut()"><mat-icon>logout</mat-icon></button>
 </mat-toolbar>
 <router-outlet></router-outlet>

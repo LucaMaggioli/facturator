@@ -28,6 +28,8 @@ import { ClientPageComponent } from './components/client-page/client-page.compon
 import { ArticlesPageComponent } from './components/articles-page/articles-page.component';
 import { AddArticleFormComponent } from './components/add-article-form/add-article-form.component';
 import {MatIconModule} from "@angular/material/icon";
+import {LoginRoutingModule} from "./app-login/login-routing.module";
+import {LoginModule} from "./app-login/login.module";
 
 
 @NgModule({
@@ -60,6 +62,7 @@ import {MatIconModule} from "@angular/material/icon";
         MatNativeDateModule,
         MatToolbarModule,
         MatIconModule,
+        LoginModule,
     ],
   providers: [FacturatorApiCallService, MatDatepickerModule],
   bootstrap: [AppComponent]

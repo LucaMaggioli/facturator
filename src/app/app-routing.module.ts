@@ -5,11 +5,12 @@ import {BillCreationComponent} from "./components/bill-creation/bill-creation.co
 import {HomePageComponent} from "./components/home-page/home-page.component";
 import {ClientPageComponent} from "./components/client-page/client-page.component";
 import {ArticlesPageComponent} from "./components/articles-page/articles-page.component";
+import {LoginGuard} from "./app-login/guards/login.guard";
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'bill', component: BillCreationComponent },
+  { path: 'bill', component: BillCreationComponent, canActivate: [LoginGuard]},
   { path: 'clients', component: ClientPageComponent },
   { path: 'articles', component: ArticlesPageComponent },
   { path: 'home', component: HomePageComponent },
