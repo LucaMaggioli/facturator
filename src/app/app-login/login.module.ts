@@ -8,12 +8,15 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import { LoginRedirectionSnackBarComponent } from './components/login-redirection-snack-bar/login-redirection-snack-bar.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
+    LoginRedirectionSnackBarComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +26,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
     MatButtonModule,
     MatIconModule,
     MatInputModule,
+    MatProgressSpinnerModule,
   ],
   providers:[
     MatSnackBar,

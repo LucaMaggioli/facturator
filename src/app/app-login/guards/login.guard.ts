@@ -3,6 +3,8 @@ import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTre
 import { Observable } from 'rxjs';
 import {UserService} from "../services/user.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {TimerService} from "../../services/timer.service";
+import {LoginRedirectionSnackBarComponent} from "../components/login-redirection-snack-bar/login-redirection-snack-bar.component";
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,7 @@ export class LoginGuard implements CanActivate {
     private router:Router,
     private _userService:UserService,
     private _snackBar: MatSnackBar,
+    private _timer: TimerService,
   ) {
   }
 
@@ -20,7 +23,10 @@ export class LoginGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree
   {
-    this._userService.isUserLogged ? '' : this._snackBar.open('login necessary!');
+    this._userService.isUserLogged ? '' :
+      this._snackBar.openFromComponent(LoginRedirectionSnackBarComponent,{data:'you will be redirect to login page', duration:3000});
+
+    this._timer.sleep(3000);
     return this._userService.isUserLogged || this.router.parseUrl('login');
   }
 
