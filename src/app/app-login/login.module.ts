@@ -7,6 +7,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 
 
@@ -21,7 +22,10 @@ import {MatInputModule} from "@angular/material/input";
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+  ],
+  providers:[
+    MatSnackBar,
   ]
 })
 export class LoginModule { }
