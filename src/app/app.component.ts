@@ -15,5 +15,9 @@ export class AppComponent {
     this._userService.logOutUser();
   }
 
+  logIn(){
+
+  }
+
   title = 'facturator';
 }

@@ -5,9 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  isUserLogged = false;
+  isUserLogged = !!localStorage.userLogged;
 
   constructor() { }
+
+  login(){
+
+  }
 
   logInUser(username:string, password:string){
     //call the api to ask the DB if the username and password are right
