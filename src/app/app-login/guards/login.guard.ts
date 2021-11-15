@@ -26,14 +26,7 @@ export class LoginGuard implements CanActivate {
     this._userService.isUserLogged ? '' :
       this._snackBar.openFromComponent(LoginRedirectionSnackBarComponent,{data:'you will be redirect to login page', duration:3000});
 
-    this._timer.sleep(3000);
+    this._timer.sleep(3000); //should be await but can't in a guard(ask Yassin)
     return this._userService.isUserLogged || this.router.parseUrl('login');
   }
-
-  //redirect to login page
-  loginPageRedirect(){
-    this._snackBar.open('login necessary!');
-    this.router.parseUrl('login');
-  }
-
 }
