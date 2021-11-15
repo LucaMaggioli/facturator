@@ -15,6 +15,10 @@ export class UserService {
       this.isUserLogged = true;
       localStorage.userLogged = "luca"
       console.log("User logged in succesfully");
+      return true;
+    }
+    else{
+      return false
     }
   }
 
