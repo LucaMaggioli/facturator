@@ -23,10 +23,12 @@ export class LoginGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree
   {
-    this._userService.isUserLogged ? '' :
+    if(!this._userService.isUserLogged){
       this._snackBar.openFromComponent(LoginRedirectionSnackBarComponent,{data:'login to access bill page', duration:3000});
+    }
 
     this._timer.sleep(3000); //should be await but can't in a guard(ask Yassin)
+
     return this._userService.isUserLogged || this.router.parseUrl('login');
   }
 }
