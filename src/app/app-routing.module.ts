@@ -5,7 +5,7 @@ import {BillCreationComponent} from "./components/bill-creation/bill-creation.co
 import {HomePageComponent} from "./components/home-page/home-page.component";
 import {ClientPageComponent} from "./components/client-page/client-page.component";
 import {ArticlesPageComponent} from "./components/articles-page/articles-page.component";
-import {LoginGuard} from "./app-login/guards/login.guard";
+import {LoginGuard} from "./login/guards/login.guard";
 
 
 const routes: Routes = [
